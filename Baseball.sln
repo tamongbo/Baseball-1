@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Baseball", "Baseball\Baseball.vcxproj", "{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{AA3B3B51-A328-4DEC-9FEC-A46FAE352069}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Baseball-Test", "Baseball-Test\Baseball-Test.vcxproj", "{22C0100C-5A19-4357-A468-3DCBFA95A9B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Debug|x64.ActiveCfg = Debug|x64
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Debug|x64.Build.0 = Debug|x64
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Debug|x86.ActiveCfg = Debug|Win32
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Debug|x86.Build.0 = Debug|Win32
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Release|x64.ActiveCfg = Release|x64
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Release|x64.Build.0 = Release|x64
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Release|x86.ActiveCfg = Release|Win32
+		{B3C56596-EF56-4D77-AF3D-0EC5AE091BEF}.Release|x86.Build.0 = Release|Win32
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Debug|x64.ActiveCfg = Debug|x64
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Debug|x64.Build.0 = Debug|x64
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Debug|x86.ActiveCfg = Debug|Win32
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Debug|x86.Build.0 = Debug|Win32
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Release|x64.ActiveCfg = Release|x64
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Release|x64.Build.0 = Release|x64
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Release|x86.ActiveCfg = Release|Win32
+		{22C0100C-5A19-4357-A468-3DCBFA95A9B1}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01B51024-63B4-43BD-A959-8BF003416B77}
+	EndGlobalSection
+EndGlobal
