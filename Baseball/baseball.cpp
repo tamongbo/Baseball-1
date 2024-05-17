@@ -22,7 +22,30 @@ public:
 		if (guessNumber == question) {
 			return { true, 3 ,0 };
 		}
-		return { false, 0 ,0 };
+		else {
+			GuessResult ret{ false, 0, 0 };
+			bool isMatched[3] = { 0, };
+			
+			// calculate strikes
+			for (int i = 0; i < 3; i++) {
+				if (guessNumber[i] == question[i]) {
+					ret.strikes++;
+					isMatched[i] = true;
+				}
+			}
+			
+			// calculate balls
+			for (int i = 0; i < 3; i++) {
+				if (false == isMatched[i]) {
+					for (int j = 0; j < 3; j++) {
+						if (guessNumber[i] == question[j]) {
+							ret.balls++;
+						}
+					}
+				}
+			}
+			return ret;
+		}
 	}
 
 	void assertIllegalArgument(const std::string& guessNumber)
