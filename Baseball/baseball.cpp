@@ -19,7 +19,10 @@ public:
 
 	GuessResult guess(const string& guessNumber) {
 		assertIllegalArgument(guessNumber);
-		return GuessResult{ true, 3 ,0 };
+		if (guessNumber == question) {
+			return { true, 3 ,0 };
+		}
+		return { false, 0 ,0 };
 	}
 
 	void assertIllegalArgument(const std::string& guessNumber)
