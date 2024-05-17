@@ -20,35 +20,37 @@ public:
 		assertIllegalArgument(guessNumber);
 
 		GuessResult ret{ false, 0, 0 };
-		bool isStrike[3] = { 0, };
-			
-		ret.strikes = getStrikes(guessNumber, isStrike);
+
+		ret.strikes = getStrikes(guessNumber);
 	
 		if (ret.strikes == 3) {
 			ret.solved = true;
 		}
 		else {
-			ret.balls = calculateBalls(guessNumber, isStrike);
+			ret.balls = getBalls(guessNumber);
 		}
 		return ret;
 	}
 
-	int getStrikes(const std::string& guessNumber, bool isStrike[3])
+	bool isStrike(char a, char b)
+	{
+		return a == b;
+	}
+
+	int getStrikes(const std::string& guessNumber)
 	{
 		int strikeCnt = 0;
 		for (int i = 0; i < 3; i++) {
-			if (guessNumber[i] != question[i]) continue;
-			strikeCnt++;
-			isStrike[i] = true;
+			if (isStrike(guessNumber[i], question[i])) strikeCnt++;
 		}
 		return strikeCnt;
 	}
 
-	int calculateBalls(const std::string& guessNumber, bool isStrike[3])
+	int getBalls(const std::string& guessNumber)
 	{
 		int ballCnt = 0;
 		for (int i = 0; i < 3; i++) {
-			if (true == isStrike[i]) continue; 
+			if (isStrike(guessNumber[i], question[i])) continue;
 	
 			for (int j = 0; j < 3; j++) {
 				if (guessNumber[i] == question[j]) {
@@ -83,4 +85,6 @@ public:
 	}
 private:
 	string question;
+
+	const int GUESS_NUMBER_COUNT = 3;
 };
